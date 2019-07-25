@@ -1,0 +1,162 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap4/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <script src="bootstrap4/js/bootstrap.min.js"></script>
+  <script src="ajax/jquery.min.js"></script>
+
+
+  <script src="sidebar/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="ajax/popper.min.js"></script>
+  <script src="bootstrap4/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 20px;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var readURL = function(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            $('.avatar').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $(".file-upload").on('change', function() {
+        readURL(this);
+      });
+    });
+  </script>
+
+</head>
+<hr>
+<div class="container bootstrap snippet">
+  <div class="row">
+
+    <div class="col-sm-10">
+      <h1 style="left:30px;position:relative;">Patients Details</h1>
+    </div>
+    <div class="col-sm-2"><a href="/users" class="float-xs-right"><img title="profile image" class="rounded-circle img-responsive" src="">logo</a></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <!--left col-->
+    </div>
+    <!--/col-3-->
+    <div class="col-md-11 ">
+      <div class="bs-example">
+        <nav class="nav nav-tabs">
+          <a data-toggle="tab" href="#personalId" class="nav-item nav-link active">Personal detail</a>
+          <a data-toggle="tab" href="#additionalId" class="nav-item nav-link ">Additional detail</a>
+          <a data-toggle="tab" href="#reportId" class="nav-item nav-link ">Report</a>
+        </nav>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane active" id="personalId">
+          <hr>
+          <form class="form" action="##" method="post" id="registrationForm">
+            <div class="row">
+              <div class="col">
+                <label for="first_name">
+                  <h4>First name</h4>
+                </label>
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+              </div>
+
+              <div class="col">
+                <label for="last_name">
+                  <h4>Last name</h4>
+                </label>
+                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <label for="last_name">
+                  <h4>Gender</h4>
+                </label>
+                <select class="form-control">
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="mobile">
+                  <h4>Date of birth</h4>
+                </label>
+                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="date" title="enter your mobile number if any.">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <label for="email">
+                  <h4>Email</h4>
+                </label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+              </div>
+              <div class="col">
+                <label for="email">
+                  <h4>Location</h4>
+                </label>
+                <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <label for="password">
+                  <h4>Password</h4>
+                </label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+              </div>
+              <div class="col">
+                <label for="password2">
+                  <h4>Verify</h4>
+                </label>
+                <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <br>
+                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+              </div>
+            </div>
+          </form>
+
+          <hr>
+
+        </div>
+        <!--/tab-pane-->
+        <div class="tab-pane" id="additionalId">
+          <hr>
+          <h2>additional</h2>
+
+        </div>
+        <!--/tab-pane-->
+        <div class="tab-pane" id="reportId">
+          <hr>
+          <h2>report</h2>
+
+        </div>
+        <!--/tab-pane-->
+      </div>
+      <!--/tab-content-->
+
+    </div>
+    <!--/col-9-->
+  </div>
+  <!--/row-->
+</div>
